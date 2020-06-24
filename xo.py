@@ -1,6 +1,8 @@
 from tkinter import Button, Tk
 
 root = Tk()
+root.configure(bg='mint cream')
+
 #VARIABLES
 board = ["_" , "_", "_", 
          "_" , "_", "_",

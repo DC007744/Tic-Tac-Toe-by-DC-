@@ -1,3 +1,6 @@
+from tkinter import Button, Tk
+
+root = Tk()
 #VARIABLES
 board = ["_" , "_", "_", 
          "_" , "_", "_",
@@ -112,4 +115,6 @@ def play_game():
         print(current_player + " wins!")
     
 
-play_game()
+b1 = Button(root, command=play_game)
+b1.pack()
+root.mainloop

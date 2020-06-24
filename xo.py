@@ -113,7 +113,7 @@ def play_game():
     else:
         flip_turn()
         print(current_player + " wins!")
-    
+
 
 b1 = Button(root, command=play_game)
 b1.pack()

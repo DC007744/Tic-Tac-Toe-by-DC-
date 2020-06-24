@@ -110,6 +110,6 @@ def play_game():
     else:
         flip_turn()
         print(current_player + " wins!")
-    
+
 
 play_game()

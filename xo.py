@@ -110,19 +110,6 @@ def play_game():
     else:
         flip_turn()
         print(current_player + " wins!")
-
-    #ask_again = input("Play again? (Y/N)")
-    #if ask_again[0] == 'Y' or 'y':
-    #   play_game()
-    #elif ask_again[0] == 'N' or 'n':
-    #   print("Ok, Bye!")
-        
-    #else:
-    #   print("Invalid input!")
     
 
 play_game()
-
-
-
- 

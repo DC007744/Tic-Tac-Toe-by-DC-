@@ -1,0 +1,34 @@
+----------------------------------------------------------------------------
+                                      **REQUIREMENTS**
+1. Create board
+2. Take user input
+3. Check for position availability (if available=nxt func(); if not=usr ip again)
+4. Swap position "_" with "X" and give control to player 2 ("O")
+5. Check if game is over (win/tie)
+		[win => check rows, columns, and diagonals]
+		[tie => if no rows, columns, or diagonals make pattern]
+(If gameOver= Declare winner; else repeat from position_check)(3,4,5,3,4,5,...)
+
+
+----------------------------------------------------------------------------
+                                      **DESIGN**
+1. Functions:
+	-> display_board()	{Displays the board}
+
+	-> handle_turn()	{Takes user i/p} + {Checks position availability} + {Lets user put "X" or "O"}      
+
+	-> player_turn_swap()   {Decides if "X" or "O" will go next}
+
+	-> check_win()          {Checks rows, columns, and diagonals for pattern} + {Declares winner}
+
+	-> check_tie()          {Checks if all positions are occupied} + {confirms "no pattern found"}
+
+{main}*	-> play_game()		{Will include all above functions in order}
+
+
+2. play_game() 
+   {
+	handle_turn()
+	player_turn_swap()
+	check_win_or_tie()         [ WILL HAVE check_win() & check_tie() ]
+   }

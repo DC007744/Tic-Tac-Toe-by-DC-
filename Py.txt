@@ -1,0 +1,606 @@
+# Global variables
+board = ["_" , "_", "_", 
+         "_" , "_", "_",
+         "_" , "_", "_"]
+
+position_occupied = True
+winner = None
+#-----------------------------------------------------------
+
+# Functions
+def display_board():
+  print(board[0] + " | " + board[1] + " | " + board[2])
+  print(board[3] + " | " + board[4] + " | " + board[5])
+  print(board[6] + " | " + board[7] + " | " + board[8])
+
+
+
+def position_check():
+  position = input("Choose a position from 1-9: ")
+  position = int(position) - 1 
+
+  if board[position] == "X" or board[position] == "Y":
+    print("Choose another position")
+    position_occupied = True
+
+  if board[position] == "_":
+    position_occupied = False
+
+
+
+
+
+def handle_turn():
+
+  position = input("Choose a position from 1-9: ")
+  position = int(position) - 1
+  
+  X_playing = True
+  Y_playing = False
+  
+  while a==
+  if X_playing:
+    board[position] = "X"
+    display_board()
+    X_playing = False
+    Y_playing = True
+  
+  elif Y_playing:
+    board[position] = "Y"
+    handle_turn()
+    Y_playing = False
+
+  else:
+    print("Position occupied!")
+  
+  handle_turn()
+
+
+    
+
+#-----------------------------------------------------------
+
+def play_game():
+  display_board()
+  handle_turn()
+
+
+
+play_game()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Global variables (board)
+# play_game()
+  # display_board()
+  # check_win()
+  # check_tie()
+  # handle_turn()
+  #flip_player()
+
+
+
+
+
+
+# check win
+  # check rows
+  # check columns
+  # check diagonals
+#check tie
+#flip player
+
+------------------------------------------------------------------------------
+# Global variables
+board = ["_" , "_", "_", 
+         "_" , "_", "_",
+         "_" , "_", "_"]
+
+position_occupied = True
+winner = None
+
+#-----------------------------------------------------------
+
+# Functions
+def display_board():
+  print(board[0] + " | " + board[1] + " | " + board[2])
+  print(board[3] + " | " + board[4] + " | " + board[5])
+  print(board[6] + " | " + board[7] + " | " + board[8])
+
+
+
+def position_check():
+  position = input("Choose a position from 1-9: ")
+  position = int(position) - 1 
+
+  if board[position] == "X" or board[position] == "Y":
+    print("Choose another position")
+    position_occupied = True
+
+  if board[position] == "_":
+    position_occupied = False
+
+
+
+
+
+def handle_turn():
+
+  position = input("Choose a position from 1-9: ")
+  position = int(position) - 1
+  
+  X_playing = True
+ 
+  for i in range(1,9):
+    if X_playing == True:
+      board[position] == "X"
+      display_board()
+      #X_playing = False
+      #Y_playing = True
+
+    if Y_playing == True:
+      board[position] == "Y"
+      display_board()
+      #Y_playing = False
+      #X_playing = True
+      
+
+  print ("Exited for loop")
+
+    
+
+#-----------------------------------------------------------
+
+def play_game():
+  display_board()
+  handle_turn()
+
+
+
+play_game()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Global variables (board)
+# play_game()
+  # display_board()
+  # check_win()
+  # check_tie()
+  # handle_turn()
+  #flip_player()
+
+
+
+
+
+
+# check win
+  # check rows
+  # check columns
+  # check diagonals
+#check tie
+#flip player
+----------------------------------------------------------------------------
+					NMC
+----------------------------------------------------------------------------
+def handle_turn(player):
+
+  print(player + "'s turn.")
+  position = input("Choose a position from 1-9: ")
+
+  
+  valid = False
+  while not valid:
+
+   
+    while position not in ["1", "2", "3", "4", "5", "6", "7", "8", "9"]:
+      position = input("Choose a position from 1-9: ")
+ 
+    
+    position = int(position) - 1
+
+    
+    if board[position] == "-":
+      valid = True
+    else:
+      print("You can't go there. Go again.")
+
+ 
+  board[position] = player
+
+ 
+  display_board()
+***************************************||***********************************
+
+
+1. play_game()              [y]
+2. display_board()	    [y]
+3. handle_turn(player)      [y (but not same)]
+4. check_if_game_over()	    
+5. check_for_winner() 			<---call a, b, and c in this!!
+  (a). check_rows()
+  (b). check_columns()
+  (c). check_diagonals()
+6. check_for_tie()
+7. flip_player()
+
+
+[[[[[[[[[[[[[[[[[[[[[]]]]]]]]]]]]]]]]]]]]]][[[[[[[[[[[[]]]]]]]]]]]]]]]]]]]
+Heelooo 123
+[[[[[[[[[[[[]]]]]]]]][[[[[[[[[[[[[[]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]][[[[[[]
+
+# Global variables
+board = ["_" , "_", "_", 
+         "_" , "_", "_",
+         "_" , "_", "_"]
+
+position_occupied = True
+winner = None
+current_player = "X"
+
+#-----------------------------------------------------------
+
+# Functions
+def display_board():
+  print(board[0] + " | " + board[1] + " | " + board[2])
+  print(board[3] + " | " + board[4] + " | " + board[5])
+  print(board[6] + " | " + board[7] + " | " + board[8])
+
+
+def flip_player():
+  
+  global current_player
+  
+  if current_player == "X":                                         # If the current player was X, make it O
+    current_player = "O"
+  elif current_player == "O":                                       # Or if the current player was O, make it X
+    current_player = "X"
+
+#Check position
+def position_check():
+  position = input("Choose a position from 1-9: ")
+  position = int(position) - 1 
+
+  global position_occupied
+
+  if position == "X" or position == "Y":
+    print("Choose another position")
+    position_occupied = True
+
+  if board[position] == "_":
+    position_occupied = False
+
+
+
+def handle_turn():
+
+  position = input("Choose a position from 1-9: ")
+  position = int(position) - 1
+  
+  if board[position] == 
+
+
+
+
+
+  
+  
+  position_check()
+#-----------------------------------------------------------
+
+def play_game():
+  display_board()
+  handle_turn()
+  flip_player()
+
+
+play_game()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Global variables (board)
+# play_game()
+  # display_board()
+  # check_win()
+  # check_tie()
+  # handle_turn()
+  #flip_player()
+
+
+
+
+
+
+# check win
+  # check rows
+  # check columns
+  # check diagonals
+#check tie
+#flip player
+
+
+
+
+==========================================================================
+				Latest
+==========================================================================
+def handle_turn():
+
+  position = input("Choose a position from 1-9: ")
+  position = int(position) - 1
+  
+  global position_occupied
+  
+  if board[position] == "X" or board[position] == "Y":
+    print("Choose another position")
+    position_occupied = True
+    handle_turn()
+
+  if board[position] == "_":
+    position_occupied = False
+
+    global current_player
+    board[position] == "current_player"
+    display_board()
+
+
+lastttttt
+===========================================
+#VARIABLES
+board = ["_" , "_", "_", 
+         "_" , "_", "_",
+         "_" , "_", "_"]
+
+current_player = 'X'
+position = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
+
+
+#FUNCTIONS
+def display_board():
+    print(board[0] + " | " + board[1] + " | " + board[2] + "     1 | 2 | 3")
+    print(board[3] + " | " + board[4] + " | " + board[5] + "     4 | 5 | 6")
+    print(board[6] + " | " + board[7] + " | " + board[8] + "     7 | 8 | 9")
+
+def handle_turn():
+    display_board()
+    position = input("Choose an position from 1-9: ")
+
+    if position in ["1", "2", "3", "4", "5", "6", "7", "8", "9"]:
+        position = int(position) - 1
+
+        if board[position] == 'X' or board[position] == 'O':
+            print("Position occupied. Go again!")
+
+        elif board[position] == '_':
+            board[position] = 'X'
+            current_player = 'X'
+            display_board()
+            player_turn_swap()
+            print(current_player)
+            position = input("Choose an position from 1-9: ")
+            position = int(position) - 1
+            board[position] = current_player
+            display_board()
+
+            player_turn_swap()
+
+    else: print("Invalid choice. Go again!")
+
+
+def player_turn_swap():
+    global current_player
+    if current_player == 'X':
+        current_player == 'O'
+    elif current_player == 'O':
+        current_player == 'X'
+    print(current_player)
+    return current_player
+     
+    
+def play_game():
+    handle_turn()
+
+
+play_game()
+
+----------------------------------------------------------------------------
+				22/05/2020
+----------------------------------------------------------------------------
+#VARIABLES
+board = ["_" , "_", "_", 
+         "_" , "_", "_",
+         "_" , "_", "_"]
+
+current_player = 'X'
+position = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
+
+
+#FUNCTIONS
+def display_board():
+    print(board[0] + " | " + board[1] + " | " + board[2] + "     1 | 2 | 3")
+    print(board[3] + " | " + board[4] + " | " + board[5] + "     4 | 5 | 6")
+    print(board[6] + " | " + board[7] + " | " + board[8] + "     7 | 8 | 9")
+
+def handle_turn():
+    print("\n")
+    print ("X\'s turn.")
+    print("\n")
+    display_board()
+    position = input("Choose an position from 1-9: ")
+
+    if position in ["1", "2", "3", "4", "5", "6", "7", "8", "9"]:
+        position = int(position) - 1
+
+        if board[position] == 'X' or board[position] == 'O':
+            print("Position occupied. Go again!")
+            handle_turn()
+
+        elif board[position] == '_':
+            print("\n")
+            print ("O/'s turn.")
+            print("\n")
+            
+            x_turn()
+            board[position] = current_player
+            display_board()
+            
+            o_turn()
+            print("\n")
+
+            position = input("Choose an position from 1-9: ")
+            position = int(float(position)) - 1
+            board[position] = current_player
+            display_board()
+                                                                           #print("printed O")
+            
+    else: print("Invalid choice. Go again!")
+
+def x_turn():
+    global current_player
+    current_player = 'X'
+
+
+def o_turn():
+    global current_player
+    current_player = 'O'
+
+def check_win():
+    global current_player
+    
+    if board[0] == board[1] == board[2] == 'X' or 'O':                               #ROWS
+        print("Game over. " + current_player + " wins!")
+        exit()
+
+    elif board[3] == board[4] == board[5] == 'X' or 'O':
+        print("Game over. " + current_player + " wins!")
+        exit()
+
+    elif board[6] == board[7] == board[8] == 'X' or 'O':
+        print("Game over. " + current_player + " wins!")
+        exit()
+    
+    
+    
+    elif board[0] == board[3] == board[6] == 'X' or 'O':                              #COLUMNS
+        print("Game over. " + current_player + " wins!")
+        exit()
+
+    elif board[1] == board[4] == board[7] == 'X' or 'O':
+        print("Game over. " + current_player + " wins!")
+        exit()
+
+    elif board[2] == board[5] == board[8] == 'X' or 'O':
+        print("Game over. " + current_player + " wins!")
+        exit()
+
+
+    elif board[0] == board[4] == board[8] == 'X' or 'O':                               #DIAGONALS
+        print("Game over. " + current_player + " wins!")
+        exit()
+
+    elif board[2] == board[4] == board[6] == 'X' or 'O':
+        print("Game over. " + current_player + " wins!")
+        exit()
+
+    else: 
+        print("It's a Tie!")
+        exit()
+
+
+
+
+
+
+#---------------------     
+    
+def play_game():
+    i = 0
+    while i < 10:
+        handle_turn()
+        check_win()
+        i = i + 1
+    
+
+
+play_game()

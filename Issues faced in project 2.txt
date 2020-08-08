@@ -1,0 +1,2 @@
+1. The message gets logged to the console correctly...but it is only a blip - it disappears right away --> In your code, the form was submited so console was refreshed. Use e.prevent default.
+2. 
